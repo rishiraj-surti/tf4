@@ -1,0 +1,34 @@
+git log --oneline
+
+Suppose you have the following
+
+e4a3356 commit 4
+d8dcd33 commit 3
+980a4c5 commit 2
+f07a22b commit 1
+bb8f52c Initial commit
+
+Pick the commit after which you want to squash the commits.
+
+git rebase -i bb8f52c
+
+pick commit 1
+pick commit 2
+pick commit 3
+pick commit 4
+
+change to
+
+pick commit 1
+squash commit 2
+squash commit 3
+squash commit 4
+
+Save and exit..
+You will be prompted by another file for commit messages.
+Comment all messages except which corresponds to the first one. i.e. which corresponds to the commit which we have 'pick'ed.
+You can even edit the commit message, something like 'squashed commits 2,3,4.
+
+Save and exit.
+
+git push -f 
