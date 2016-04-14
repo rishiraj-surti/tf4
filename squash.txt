@@ -1,1 +1,7 @@
 This is to test rebasing the repositories in git.
+
+This is another commit.
+
+A yet another commit.
+
+Oh no, another commit.
